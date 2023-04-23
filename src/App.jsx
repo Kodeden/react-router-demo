@@ -1,9 +1,23 @@
-import Header from "./components/header/header";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/layout";
+import { About, Contact, LoginRegister } from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "",
+    element: <Layout />,
+    children: [
+      { path: "about", element: <About /> },
+      { path: "contact", element: <Contact /> },
+      { path: "login", element: <LoginRegister /> },
+    ],
+  },
+]);
 
 function App() {
   return (
     <>
-      <Header />
+      <RouterProvider router={router} />
     </>
   );
 }

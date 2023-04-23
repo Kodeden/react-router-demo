@@ -15,7 +15,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li>
-          <Link to="login" className="text-blue-500">
+          <Link to="/login" className="text-blue-500">
             Login/Register
           </Link>
         </li>
